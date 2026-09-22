@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyConFi</title>
+    <link rel="stylesheet" href="global.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>MyConFi</h1>
+        </nav>
+    </header>
+
+    <main>
+        <section id="cadastro">
+            <h2>Nova Movimentação:</h2>
+
+            <select id="tipo">
+                <option value="">Selecione sua movimentação financeira:</option>
+                <option value="receita">Receita</option>
+                <option value="investimento">Investimento</option>
+                <option value="despesa">Despesa</option>
+            </select>
+
+            <form id="form-receita">
+                <label for="descricao-receita">Tipo:</label>
+                <select id="descricao-receita" name="descricao-receita" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="salario">Salário</option>
+                    <option value="horas extras">Horas Extras</option>
+                    <option value="freelance">Freelance</option>
+                    <option value="ferias">Férias</option>
+                    <option value="decimo">Décimo Terceiro</option>
+                    <option value="outros">Outros</option>
+                </select>
+                <label for="valor-receita">Valor:</label>
+                <input type="text" placeholder="R$ 0,00" onkeyup="mascara(this)" id="valor-receita" name="valor-receita" required>
+                <label for="data-receita">Data:</label>
+                <input type="date" id="data-receita" name="data-receita" required>
+                <button type="submit">Adicionar Receita</button>
+            </form>
+
+            <form id="form-investimento">
+                <label for="descricao-investimento">Tipo:</label>
+                <select id="descricao-investimento" name="descricao-investimento" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="acoes">Ações</option>
+                    <option value="fundos imobiliarios">Fundos Imobiliários</option>
+                    <option value="tesouro direto">Tesouro Direto</option>
+                    <option value="criptoativos">Criptoativos</option>
+                    <option value="renda fixa">Renda Fixa</option>
+                    <option value="previdencia privada">Previdência Privada</option>
+                    <option value="outros">Outros</option>
+                </select>
+                <label for="valor-investimento">Valor:</label>
+                <input type="text" placeholder="R$ 0,00" onkeyup="mascara(this)" id="valor-investimento" name="valor-investimento" required>
+                <label for="data-investimento">Data:</label>
+                <input type="date" id="data-investimento" name="data-investimento" required>
+                <button type="submit">Adicionar Investimento</button>
+            </form>
+
+            <form id="form-despesa">
+                <label for="tipo-despesa">Tipo de despesa:</label>
+                <select id="tipo-despesa" name="tipo-despesa" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="Fixa">Fixa</option>
+                    <option value="Variável">Variável</option>
+                    <option value="Extra">Extra</option>
+                </select>
+
+                <label for="categoria-despesa">Categoria:</label>
+                <select id="categoria-despesa" name="categoria-despesa" required>
+                    <option value="">Selecione uma categoria</option>
+                </select>
+
+                <label for="subcategoria-despesa">Subcategoria:</label>
+                <select id="subcategoria-despesa" name="subcategoria-despesa" required>
+                    <option value="">Selecione uma subcategoria</option>
+                </select>
+
+                <label for="valor-despesa">Valor:</label>
+                <input type="text" placeholder="R$ 0,00" onkeyup="mascara(this)" id="valor-despesa" name="valor-despesa" required>
+
+                <label for="data-despesa">Data:</label>
+                <input type="date" id="data-despesa" name="data-despesa" required>
+
+                <button type="submit">Adicionar Despesa</button>
+
+            </form>
+        </section>
+
+
+        <section id="resumo">
+            <h2>Resumo financeiro</h2>
+
+            <div>
+                <h3>Receitas:</h3>
+                <p id="total-receitas">R$ 0,00</p>
+            </div>
+
+            <div>
+                <h3>Investimentos:</h3>
+                <p id="total-investimentos">R$ 0,00</p>
+            </div>
+
+            <div>
+                <h3>Despesas:</h3>
+                <p id="total-despesas">R$ 0,00</p>
+            </div>
+
+            <div>
+                <h3>Saldo:</h3>
+                <p id="saldo">R$ 0,00</p>
+            </div>
+        </section>
+
+        <section id="lancamentos">
+            <h2>Entradas e saídas</h2>
+
+            <div id="filtros">
+                
+                <label for="data-inicio">Data de início:</label>
+                <input type="date" id="data-inicio" name="data-inicio">
+
+                <label for="data-fim">Data de fim:</label>
+                <input type="date" id="data-fim" name="data-fim">
+
+                <label for="tipo-filtro">Tipo:</label>
+                <select id="tipo-filtro" name="tipo-filtro">
+                    <option value="">Todos</option>
+                    <option value="receita">Receita</option>
+                    <option value="investimento">Investimento</option>
+                    <option value="despesa">Despesa</option>
+                </select>
+                <button id="filtrar">Filtrar</button>
+            </div>
+
+            <table id="tabela">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Valor</th>
+                        <th>Categoria</th>
+                        <th>Subcategoria</th>
+                        <th>Data</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Os dados da tabela serão preenchidos dinamicamente -->
+                </tbody>
+            </table>
+
+        </section>
+
+    </main>
+
+    <script src="scripts.js"></script>    
+</body>
+</html>

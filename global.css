@@ -1,0 +1,189 @@
+/*ESTRUTURA*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333;
+}
+main{
+    width: 90%;
+    margin: 30px auto;
+    max-width: 1200px;
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
+nav {
+    background-color: yellowgreen;
+    text-align: center;
+    padding: 20px;
+}
+nav h1 { 
+    color: white;
+    font-size: 28px;
+}
+/*CADASTRO DOS LANÇAMENTOS*/
+#cadastro {
+    background-color: white;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+#cadastro h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#cadastro input,
+#cadastro select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+#cadastro label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#cadastro button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: yellowgreen;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#cadastro button:hover {
+    background-color: #7ca82b;
+}
+/*CARDS*/
+#resumo{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+#resumo h2{
+    grid-column: -1/1 ;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#resumo h3{
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+#resumo p{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#resumo >div{
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+/*TABELA*/
+#tabela{
+    width: 100%;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+#tabela thead{
+    color: white;
+    background-color: yellowgreen;
+}
+#tabela th{
+    padding: 15px;
+    text-align: left;
+}
+#tabela td{
+    padding: 10px;
+    text-align: left;
+}
+#tabela tbody tr:hover{
+    background-color: #f5f5f5;
+}
+#tabela button{
+    padding: 7px 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #dc3545;
+    color:white;
+    cursor: pointer;
+
+}
+#tabela button:hover{
+    background-color: #b02a37;
+}
+#tabela td:last-child{
+    text-align: center;
+}
+
+/* FILTRO */
+#lancamentos{
+    text-align: center;
+}
+#filtros{
+    background-color: white;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    justify-content: center;
+}
+#filtros label{
+    font-size: bold;
+    text-align: center;
+}
+#filtros input, #filtros select{
+    padding: 9px;
+    border: 19x solid #ccc;
+    border-radius: 6px;
+}
+#filtros button{
+    padding: 9px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: yellowgreen;
+    color: white;
+    cursor:pointer;
+    font-weight: bold;
+}
+#filtros button:hover{
+    background-color: #7ca82b;
+}
