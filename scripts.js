@@ -22,7 +22,7 @@ const categoriaDespesa = document.getElementById('categoria-despesa')
 
 const categoriaPorTipo = {
     'Fixa':['Habitação', 'Transporte', 'Saúde', 'Educação', 'Outros'],
-    'Variável':['Habitação', 'Transporte', 'Alimento', 'Saúde', 'Cuidados pessoais', 'Outros'],
+    'Variável':['Habitação', 'Transporte', 'Alimentação', 'Saúde', 'Cuidados pessoais', 'Outros'],
     'Extra':['Saúde', 'Manutenção/prevenção', 'Educação', 'Lazer', 'Vestuário', 'Presentes', 'Fatura do cartão de crédito'],
 };
 
